@@ -448,4 +448,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-console.log('Website loaded successfully! 🎉'); 
+console.log('Website loaded successfully! 🎉');
+
+document.addEventListener('DOMContentLoaded', function() {
+    var kurumNumara = document.getElementById('kurumNumara');
+    if (kurumNumara) {
+        kurumNumara.addEventListener('click', function() {
+            navigator.clipboard.writeText('0352 220 5560').then(function() {
+                showNotification('Numara panoya kopyalandı!', 'success');
+            }, function() {
+                showNotification('Kopyalama başarısız oldu.', 'error');
+            });
+        });
+    }
+}); 
