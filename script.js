@@ -461,4 +461,36 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+});
+
+// Dark Mode Toggle
+function setDarkMode(enabled) {
+    if (enabled) {
+        document.body.classList.add('dark-mode');
+        document.getElementById('darkModeToggle').innerHTML = '<i class="fas fa-sun"></i>';
+    } else {
+        document.body.classList.remove('dark-mode');
+        document.getElementById('darkModeToggle').innerHTML = '<i class="fas fa-moon"></i>';
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    // Varsayılan olarak dark mode açık
+    let darkMode = localStorage.getItem('darkMode');
+    if (darkMode === null) {
+        darkMode = 'enabled';
+        localStorage.setItem('darkMode', 'enabled');
+    }
+    setDarkMode(darkMode === 'enabled');
+    darkModeToggle.addEventListener('click', function() {
+        darkMode = localStorage.getItem('darkMode');
+        if (darkMode !== 'enabled') {
+            setDarkMode(true);
+            localStorage.setItem('darkMode', 'enabled');
+        } else {
+            setDarkMode(false);
+            localStorage.setItem('darkMode', 'disabled');
+        }
+    });
 }); 

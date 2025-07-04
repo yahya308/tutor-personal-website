@@ -16,6 +16,121 @@ body {
     overflow-x: hidden;
 }
 
+body.dark-mode {
+    background: #181a1b;
+    color: #e0e0e0;
+}
+
+body.dark-mode .navbar {
+    background: #181a1b !important;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.7);
+}
+
+body.dark-mode .nav-link {
+    color: #e0e0e0;
+}
+body.dark-mode .nav-link:hover {
+    color: #fbbf24;
+}
+body.dark-mode .logo-text {
+    color: #fbbf24;
+}
+body.dark-mode .hero {
+    background: linear-gradient(135deg, #232526 0%, #414345 100%);
+    color: #e0e0e0;
+}
+body.dark-mode .btn-primary {
+    background: linear-gradient(45deg, #fbbf24, #f59e0b);
+    color: #181a1b;
+}
+body.dark-mode .btn-secondary {
+    background: #232526;
+    color: #fbbf24;
+}
+body.dark-mode .btn-secondary:hover {
+    background: #181a1b;
+    color: #fbbf24;
+}
+body.dark-mode .service-card,
+body.dark-mode .feature-card,
+body.dark-mode .about,
+body.dark-mode .contact,
+body.dark-mode .footer {
+    background: #232526;
+    color: #e0e0e0;
+}
+body.dark-mode .section-title {
+    color: #fbbf24;
+}
+body.dark-mode .stat-number {
+    color: #fbbf24;
+}
+body.dark-mode .kurum-numara {
+    background: #232526;
+    color: #fbbf24;
+}
+body.dark-mode .kurum-numara:hover {
+    background: #181a1b;
+    color: #fbbf24;
+}
+body.dark-mode .footer {
+    background: #181a1b;
+    color: #e0e0e0;
+}
+body.dark-mode .services {
+    background: #181a1b;
+}
+body.dark-mode .service-card {
+    background: #232526;
+    color: #e0e0e0;
+    border-color: #333;
+}
+body.dark-mode .service-card h3 {
+    color: #fbbf24;
+}
+body.dark-mode .service-levels h4 {
+    color: #fbbf24;
+}
+body.dark-mode .service-levels li {
+    color: #e0e0e0;
+}
+body.dark-mode .service-icon {
+    background: linear-gradient(135deg, #232526, #414345);
+}
+body.dark-mode .about {
+    background: #232526;
+    color: #e0e0e0;
+}
+body.dark-mode .about-description {
+    color: #e0e0e0;
+}
+body.dark-mode .about-text h3 {
+    color: #fbbf24;
+}
+body.dark-mode .feature h4 {
+    color: #fbbf24;
+}
+body.dark-mode .feature p {
+    color: #e0e0e0;
+}
+body.dark-mode .why-choose {
+    background: #232526;
+}
+body.dark-mode .feature-card {
+    background: #232526;
+    color: #e0e0e0;
+    border-color: #333;
+}
+body.dark-mode .feature-card h3 {
+    color: #fbbf24;
+}
+body.dark-mode .feature-card p {
+    color: #e0e0e0;
+}
+body.dark-mode .feature-icon {
+    background: linear-gradient(135deg, #232526, #414345);
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -919,4 +1034,21 @@ img[src*=".jpg"], img[src*=".jpeg"], img[src*=".png"], img[src*=".gif"] {
     opacity: 1 !important;
     visibility: visible !important;
     display: block !important;
+}
+
+.dark-mode-toggle {
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 1.7rem;
+    cursor: pointer;
+    margin-left: 1.5rem;
+    transition: color 0.3s;
+    z-index: 1100;
+}
+body.dark-mode .dark-mode-toggle {
+    color: #fbbf24;
+}
+.dark-mode-toggle:focus {
+    outline: 2px solid #fbbf24;
 } 
